@@ -1,7 +1,7 @@
 package org.mullae.toobject.uploader;
 
-import org.mullae.toobject.parser.Parser;
 import org.mullae.toobject.importer.Importer;
+import org.mullae.toobject.parser.Parser;
 
 public class UploadeImpl implements Uploader {
 

@@ -1,9 +1,6 @@
 package org.mullae.toobject.importer;
 
-import org.mullae.toobject.Model;
-import org.mullae.toobject.Param;
-
-import java.io.*;
+import java.io.InputStream;
 
 public interface Importer {
     InputStream imports();

@@ -1,15 +1,12 @@
 package org.mullae.toobject.uploader;
 
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import org.mullae.toobject.importer.FileImporter;
-import org.mullae.toobject.importer.Importer;
 import org.mullae.toobject.parser.ExcelParser;
 import org.mullae.toobject.parser.Parser;
 
 import java.io.File;
-import java.io.InputStream;
 
 public class UploadeImplTest{
 
