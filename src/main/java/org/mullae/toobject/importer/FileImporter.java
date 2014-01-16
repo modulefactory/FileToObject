@@ -1,29 +1,10 @@
 package org.mullae.toobject.importer;
 
-import java.io.*;
+import org.mullae.toobject.parser.Parser;
 
-public class FileImporter implements Importer {
+import java.io.File;
 
-    private File file;
+public interface FileImporter<T> {
 
-    public FileImporter(File file) {
-        this.file = file;
-    }
-
-    @Override
-    public InputStream imports() {
-        InputStream inputStream = getFileInputStream();
-        return inputStream;
-    }
-
-    private BufferedInputStream getFileInputStream() {
-        BufferedInputStream bis = null;
-        try {
-            bis = new BufferedInputStream(new FileInputStream(file));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return bis;
-    }
+    T imports(File file, Parser parser);
 }
