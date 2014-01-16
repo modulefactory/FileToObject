@@ -2,7 +2,7 @@ package org.mullae.toobject.uploader;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mullae.toobject.importer.FileImporter;
+import org.mullae.toobject.importer.FileImporterImpl;
 import org.mullae.toobject.parser.ExcelParser;
 import org.mullae.toobject.parser.Parser;
 
@@ -18,7 +18,7 @@ public class UploadeImplTest{
     }
     @Test
     public void uploadTest() {
-        FileImporter importer = new FileImporter(new File(getTestFolderPath() + "/test.xlsx"));
+        FileImporterImpl importer = new FileImporterImpl(new File(getTestFolderPath() + "/test.xlsx"));
         Parser parser = new ExcelParser();
         DummyObject dummyObject = uploader.upload(importer, parser, DummyObject.class);
     }
