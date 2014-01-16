@@ -19,7 +19,7 @@ public class FileImporter implements Importer {
     private BufferedInputStream getFileInputStream() {
         BufferedInputStream bis = null;
         try {
-            bis = new BufferedInputStream(new FileInputStream(new File("")));
+            bis = new BufferedInputStream(new FileInputStream(file));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

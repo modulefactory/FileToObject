@@ -21,9 +21,14 @@ public class UploadeImplTest{
     }
     @Test
     public void uploadTest() {
-        FileImporter importer = new FileImporter(new File(""));
+        FileImporter importer = new FileImporter(new File(getTestFolderPath() + "/test.xlsx"));
         Parser parser = new ExcelParser();
         DummyObject dummyObject = uploader.upload(importer, parser, DummyObject.class);
+    }
+
+
+    private String getTestFolderPath() {
+        return this.getClass().getResource(File.separator + "sample").getPath() + File.separator;
     }
 }
 
