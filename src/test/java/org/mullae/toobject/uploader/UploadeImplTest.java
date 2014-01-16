@@ -3,14 +3,17 @@ package org.mullae.toobject.uploader;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
+import org.mullae.toobject.importer.FileImporter;
 import org.mullae.toobject.importer.Importer;
 import org.mullae.toobject.parser.ExcelParser;
 import org.mullae.toobject.parser.Parser;
 
 import java.io.File;
+import java.io.InputStream;
 
-public class UploadeImplTest extends TestCase {
-    Uploader<DummyObject> uploader;
+public class UploadeImplTest{
+
+    Uploader uploader;
 
     @Before
     public void setUp() {
@@ -18,9 +21,9 @@ public class UploadeImplTest extends TestCase {
     }
     @Test
     public void uploadTest() {
-        Importer importer = new Importer.FileImporter(new File(""));
+        FileImporter importer = new FileImporter(new File(""));
         Parser parser = new ExcelParser();
-        DummyObject dummyObject = uploader.upload(importer, parser);
+        DummyObject dummyObject = uploader.upload(importer, parser, DummyObject.class);
     }
 }
 
