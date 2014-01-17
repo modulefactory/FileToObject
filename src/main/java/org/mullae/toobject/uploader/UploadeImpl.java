@@ -7,7 +7,7 @@ public class UploadeImpl implements Uploader {
 
     @Override
     public <T> T upload(FileImporter importer, Parser parser, Class<T> clazz) {
-        //return parser.parse(importer.imports(), clazz);
         return null;
     }
+
 }
